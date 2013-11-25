@@ -3,6 +3,14 @@
 #include <math.h>
 #include "kmath.h"
 
+/*
+   M_* constants from math.h are available for POSIX and BSD, but are not
+   defined for any C standard. Define the ones we use if necessary.
+*/
+#ifndef M_SQRT2
+#define M_SQRT2 1.41421356237309504880  /* sqrt(2) */
+#endif
+
 /**************************************
  *** Pseudo-random number generator ***
  **************************************/
